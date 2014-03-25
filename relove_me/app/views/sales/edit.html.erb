@@ -1,0 +1,10 @@
+<div id="black_box">
+  <form action="<%= sale_path(@sale.id) %>" method="post">
+    <p>Start Time: <input type="text" name="sale[start_time]" autofocus value="<%= @sale.start_time %>"></p>
+    <p>Finish Time: <input type="text" name="sale[finish_time]" value="<%= @sale.finish_time %>"></p>
+    <p>Date: <input type="text" name="sale[date]" value="<%= @sale.date %>"></p>
+    <p>Location: <input type="text" name="sale[location]" value="<%= @sale.location %>"></p>
+    <p>Price Range: <input type="text" name="sale[price_range]" value="<%= @sale.price_range %>"></p>
+    <button>Update</button>
+  </form>
+</div>

@@ -1,0 +1,40 @@
+html {
+  background: url("/images/gs_back.jpg") no-repeat center center fixed;  
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+}  
+
+h1 {
+  padding-left: 1.3em;
+}
+
+nav {
+  background-color: white;
+  padding: 1em;
+}
+
+nav ul {
+  list-style: black;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 1em;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  margin: 30px;
+  font-style: bold;
+}
+
+nav ul li a:hover {
+  text-shadow: 0 0 5px red;
+}
+
+.signup input {
+  display: block;
+}

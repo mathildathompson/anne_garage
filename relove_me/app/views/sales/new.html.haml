@@ -1,0 +1,15 @@
+%section.signup
+  = form_for @sale do |f|
+    = f.label :start_time
+    = f.time_field :start_time, :autofocus => true
+    = f.label :finish_time
+    = f.time_field :finish_time, :autofocus => true
+    = f.label :date
+    = f.date_field :date
+    = f.label :location
+    = f.text_field :location
+    = f.label :price_range
+    = f.text_field :price_range
+
+
+    = f.submit
