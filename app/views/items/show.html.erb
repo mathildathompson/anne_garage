@@ -1,18 +1,10 @@
-<div id="results">
-  <ul>
-    <li><%= @item.title %></li>
-    <li><%= @item.condition %></li>
-    <li><%= @item.description %></li>
-    <li><%= @item.price_range %></li>
-  </ul>
-</div>
+<h2><%= @sale.suburb %></h2>
 
-<div id="image" width='282' height='198'>
-  <%= image_tag(@item.image) %>
-</div>
 
-<div id="add">
-  <form action="<%= new_item_path(@item.id) %>" method="get">
-    <button>Add another item!</button>
-  </form>
-</div>
+<p>Start time: <%= @item.title %></p>
+<p>Finish time: <%= @item.condition %></p>
+<p>Date: <%= @item.description %></p>
+<p>Price range: <%= @item.price_range %></p>
+
+<%= link_to 'Add another item', new_item_path(@item) %>
+<%= link_to 'View Listed Items', item_path(@item) %>

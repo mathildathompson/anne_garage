@@ -2,6 +2,6 @@
   <p>
     <%= link_to(sale.suburb, sale_path(sale.id)) %> 
     <%= link_to('Edit', edit_sale_path(sale.id)) %>
-    <%= link_to('Delete', delete_sale_path(sale.id)) %>
+    <%= link_to('Delete', sale_delete_path(sale.id)) %>
   </p>
 <% end %>

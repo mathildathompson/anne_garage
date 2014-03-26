@@ -42,7 +42,7 @@ class SalesController < ApplicationController
   def destroy
     sale = Sale.find params[:id]
     sale.destroy
-    redirect_to sale_path
+    redirect_to sales_path
   end
 
 end

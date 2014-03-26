@@ -8,8 +8,7 @@ class ItemsController < ApplicationController
   end
 
   def new
-    item = Item.new
-    redirect_to item
+    @item = Item.new
   end
 
   def edit

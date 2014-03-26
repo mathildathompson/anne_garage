@@ -27,9 +27,5 @@ class User <ActiveRecord::Base
   	def name
   		"#{first_name} #{last_name}"
   	end
-
-  	def address
-  		"#{street_number} #{street_name} #{suburb} #{state} #{post_code}"
-  	end
 end
 
