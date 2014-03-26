@@ -1,2 +1,15 @@
-<h1>Thanks! You now have a garage sale</h1>
+<h2><%= @sale.suburb %></h2>
+
+
+<p>Start time: <%= @sale.start_time %></p>
+<p>Finish time: <%= @sale.finish_time %></p>
+<p>Date: <%= @sale.date %></p>
+<p>Price range: <%= @sale.price_range %></p>
+
+<%= link_to 'Back', sales_path(@sale) %>
+<%= link_to 'View Listed Items', items_path(@item) %>
+
+
+
+
 

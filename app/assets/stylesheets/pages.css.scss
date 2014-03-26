@@ -6,13 +6,22 @@ html {
   background-size: cover; 
 }  
 
-h1 {
-  padding-left: 1.3em;
+header {
+     width: 216px;
+     margin-left: 82em;
+     padding-top: 15px;
+     margin-bottom: -45px;
+}
+
+#container h1 {
+  padding-left: 1.8em;
+  font-family: 'Scada', sans-serif;
+  margin-top: 3em;
 }
 
 nav {
   background-color: white;
-  padding: 1em;
+  margin-top: -100px;
 }
 
 nav ul {
@@ -29,12 +38,10 @@ nav ul li a {
   text-decoration: none;
   margin: 30px;
   font-style: bold;
+  font-family: 'Scada', sans-serif; font-weight: 400; 
 }
 
 nav ul li a:hover {
   text-shadow: 0 0 5px red;
 }
 
-.signup input {
-  display: block;
-}

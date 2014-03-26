@@ -4,12 +4,12 @@ class ItemsController < ApplicationController
   end
 
   def create
-    item = Item.create(params[:item])
-    redirect_to item
+    @item = Item.create(params[:item])
   end
 
   def new
-    @item = Item.new
+    item = Item.new
+    redirect_to item
   end
 
   def edit

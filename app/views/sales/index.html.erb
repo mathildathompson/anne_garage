@@ -1,2 +1,7 @@
-<h1>Sales#index</h1>
-<p>Find me in app/views/sales/index.html.erb</p>
+<% @sales.each do |sale| %>
+  <p>
+    <%= link_to(sale.suburb, sale_path(sale.id)) %> 
+    <%= link_to('Edit', edit_sale_path(sale.id)) %>
+    <%= link_to('Delete', delete_sale_path(sale.id)) %>
+  </p>
+<% end %>

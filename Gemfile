@@ -33,7 +33,7 @@ group :doc do
 end
 
 gem 'protected_attributes'
-gem 'bootstrap-sass'
+# gem 'bootstrap-sass'
 gem 'haml'
 gem 'sextant'
 gem 'rails_12factor'

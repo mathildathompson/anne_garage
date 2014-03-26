@@ -2,18 +2,29 @@
 #
 # Table name: sales
 #
-#  id          :integer          not null, primary key
-#  start_time  :time
-#  finish_time :time
-#  date        :date
-#  location    :string(255)
-#  price_range :integer
-#  created_at  :datetime
-#  updated_at  :datetime
+#  id            :integer          not null, primary key
+#  start_time    :time
+#  finish_time   :time
+#  date          :date
+#  price_range   :integer
+#  created_at    :datetime
+#  updated_at    :datetime
+#  street_number :integer
+#  street_name   :string(255)
+#  suburb        :string(255)
+#  state         :string(255)
+#  post_code     :integer
+#  phone_number  :integer
+#  address       :string(255)
+#  latitude      :float
+#  longtitude    :float
 #
 
 class Sale <ActiveRecord::Base
-    attr_accessible :start_time, :finish_time, :date, :location, :price_range
+    attr_accessible :start_time, :finish_time, :date, :price_range, :street_number, :street_name, :suburb, :state, :phone_number, :post_code, :address, :longitude, :latitude
 	has_many :items
+
+	geocoded_by :address
+    after_validation :geocode, :if => :address_changed?
 end
 

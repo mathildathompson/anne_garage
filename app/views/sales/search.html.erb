@@ -1,10 +1,8 @@
 <h1>Search for a garage sale by suburb</h1>
-
-<div id="search">
-  <form action="<%= search_path %>" method="post">
-    <p>Location: <input type="text" name="sale[location]" value="<%= @sale.location %>"></p>
-    <button>Search</button>
-  </form>
-</div>
-
+  
+<%= form_tag search_path, :method => :get do %>  
+  <p>  
+    <%= text_field_tag :search, params[:suburb] %>  
+    <%= submit_tag "Search", :name => nil %>  
+<% end %>  
 

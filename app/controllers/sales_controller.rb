@@ -3,20 +3,20 @@ class SalesController < ApplicationController
     @sales = Sale.all
   end
 
+  def new
+    @sale = Sale.new
+  end
+
   def create
     sale = Sale.create(params[:sale])
     redirect_to new_item_path
   end
 
-  def new
-    @sale = Sale.new
-  end
-
-  def edit
+  def show
     @sale = Sale.find params[:id]
   end
 
-  def show
+  def edit
     @sale = Sale.find params[:id]
   end
 
@@ -24,15 +24,25 @@ class SalesController < ApplicationController
     @sales = Sale.all
   end
 
+  def result 
+    if params[:search].present?  
+      @sales = Location.near(params[:search], 50,
+      :order => :distance)  
+    else  
+      @sales = Location.all  
+    end  
+  end  
+
   def update
     sale = Sale.find params[:id]
-    sale.update_attributes params[:sale]
+    sale.update_attributes (params[:sale])
     redirect_to sale
   end
 
   def destroy
     sale = Sale.find params[:id]
     sale.destroy
-    redirect_to sales_new_path
+    redirect_to sale_path
   end
+
 end
