@@ -24,8 +24,8 @@ class Sale <ActiveRecord::Base
     attr_accessible :start_time, :finish_time, :date, :price_range, :street_number, :street_name, :suburb, :state, :phone_number, :post_code, :address, :longitude, :latitude
 	has_many :items
 
-	geocoded_by :address
-    after_validation :geocode, :if => :address_changed?
+	geocoded_by :suburb
+    after_validation :geocode, :if => :suburb_changed?
 
 
   	def address

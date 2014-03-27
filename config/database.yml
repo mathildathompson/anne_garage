@@ -5,12 +5,12 @@ development:
   database: relove_me_development
   pool: 5
   host: localhost
-  username: annehomann
+  username: mathildathompson
   password:
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: relove_me_development
-  pool: 5
-  password:
+# production:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: mathildathompson
+#   pool: 5
+#   password:
