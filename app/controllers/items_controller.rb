@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.create(params[:item])
+    redirect_to item
   end
 
   def new

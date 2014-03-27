@@ -1,10 +1,8 @@
-<h2><%= @sale.suburb %></h2>
 
-
-<p>Start time: <%= @item.title %></p>
-<p>Finish time: <%= @item.condition %></p>
-<p>Date: <%= @item.description %></p>
-<p>Price range: <%= @item.price_range %></p>
+<p><%= @item.title %></p>
+<p><%= @item.condition %></p>
+<p><%= @item.description %></p>
+<p><%= @item.price_range %></p>
 
 <%= link_to 'Add another item', new_item_path(@item) %>
 <%= link_to 'View Listed Items', item_path(@item) %>

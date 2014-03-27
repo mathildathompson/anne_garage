@@ -1,2 +1,8 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+<% @items.each do |item| %>
+
+<% end %>
+
+<div id="links">
+<%= link_to 'Back', sales_path(@sale) %>
+<%= link_to 'Add More Items', new_item_path(@item) %>
+</div>

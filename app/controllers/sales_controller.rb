@@ -26,10 +26,10 @@ class SalesController < ApplicationController
 
   def result 
     if params[:search].present?  
-      @sales = Location.near(params[:search], 50,
+      @sales = Sale.near(params[:suburb], 50,
       :order => :distance)  
     else  
-      @sales = Location.all  
+      @sales = Sale.all  
     end  
   end  
 
