@@ -4,8 +4,8 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.create(params[:item])
-    redirect_to item
+    item = Item.create(params[:item])
+    redirect_to item_path(item)
   end
 
   def new

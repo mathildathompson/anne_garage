@@ -75,3 +75,40 @@ nav ul li a:hover {
   margin: 30px;
   font-family: 'Scada', sans-serif; font-weight: 400;
 }
+
+.newsale {
+  padding-bottom: 2em;
+  margin-left: 200px;
+}
+
+.newsale label {
+  display: block;
+  margin-top: 3em;
+  color: white;
+}
+
+.signup {
+  padding-bottom: 2em;
+  margin-left: 200px;
+}
+
+.signup label {
+  display: block;
+  margin-top: 3em;
+  color: white;
+}
+
+.login {
+  padding-bottom: 2em;
+  margin-left: 200px;
+}
+
+.login form {
+  display: block;
+  margin-top: 3em;
+  color: white;
+}
+
+#sales p {
+  color: white;
+}

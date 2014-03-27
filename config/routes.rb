@@ -8,8 +8,8 @@ ReloveMe::Application.routes.draw do
   post '/search' => 'sales#search'
   post '/result' => 'sales#result'
   get '/sales/:id/delete' => 'sales#destroy', :as => :sale_delete
-  post '/sales/:id' => 'sales#update'
-  get '/items/:id' => 'items#show'
+  # post '/sales/:id' => 'sales#update'
+  # get '/items/:id' => 'items#show'
   resources :users, :items, :sales, :pages
 end
 
